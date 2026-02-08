@@ -17,7 +17,7 @@ This is a minimal project of an ERC20 token using openzeppelin. You can use this
   - [Testing](#testing)
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
-- [Deploying To a local anvil chain](#Deploying to local anvil chain)
+- [Deploying to a local anvil chain](#Deploying-to-local-anvil-chain)
   - [Estimate gas](#estimate-gas)
 
 
