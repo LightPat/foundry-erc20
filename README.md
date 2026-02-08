@@ -35,7 +35,7 @@ This is a minimal project of an ERC20 token using openzeppelin. You can use this
 
 ```
 git clone https://github.com/LightPat/foundry-erc20.git
-cd foundry-fund-me-cu
+cd foundry-erc20
 make
 ```
 
