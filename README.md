@@ -1,14 +1,14 @@
-# Foundry Fund Me
+# Foundry ERC20 Token
 
-This is a section of the Cyfrin Solidity Course.
+This is a section of the Cyfrin Advanced Foundry Course.
 
-*[⭐️ Updraft | Foundry Fund Me](https://updraft.cyfrin.io/courses/advanced-foundry/How-to-create-an-erc20-crypto-currency/erc-and-erc20-fundamentals)*
+*[⭐️ Updraft | Foundry ERC20 Token](https://updraft.cyfrin.io/courses/advanced-foundry/How-to-create-an-erc20-crypto-currency/erc-and-erc20-fundamentals)*
 
 # About
 
 This is a minimal project allowing users to fund the contract owner with donations. The smart contract accepts ETH as donations, denominated in USD. Donations have a minimal USD value, otherwise they are rejected. The value is priced using a Chainlink price feed, and the smart contract keeps track of doners in case they are to be rewarded in the future.
 
-- [Foundry Fund Me](#foundry-fund-me)
+- [Foundry ERC20 Token](#foundry-erc20-token)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
@@ -18,8 +18,6 @@ This is a minimal project allowing users to fund the contract owner with donatio
     - [Test Coverage](#test-coverage)
 - [Deployment to a testnet or mainnet](#deployment-to-a-testnet-or-mainnet)
 - [Deploying To a local anvil chain](#Deploying to local anvil chain)
-  - [Scripts](#scripts)
-    - [Withdraw](#withdraw)
   - [Estimate gas](#estimate-gas)
 
 
@@ -36,7 +34,7 @@ This is a minimal project allowing users to fund the contract owner with donatio
 ## Quickstart
 
 ```
-git clone https://github.com/LightPat/foundry-fund-me.git
+git clone https://github.com/LightPat/foundry-erc20.git
 cd foundry-fund-me-cu
 make
 ```
@@ -46,7 +44,7 @@ make
 ## Deploy
 
 ```
-forge script script/DeployFundMe.s.sol
+forge script script/DeployOurToken.s.sol
 ```
 
 ## Testing
@@ -103,29 +101,7 @@ Head over to [faucets.chain.link](https://faucets.chain.link/) and get some test
 3. Deploy
 
 ```
-forge script script/DeployFundMe.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
-```
-
-## Scripts
-
-After deploying to a testnet or local net, you can run the scripts. 
-
-Using cast deployed locally example: 
-
-```
-cast send <FUNDME_CONTRACT_ADDRESS> "fund()" --value 0.1ether --private-key <PRIVATE_KEY>
-```
-
-or
-```
-forge script script/Interactions.s.sol:FundFundMe --rpc-url sepolia  --private-key $PRIVATE_KEY  --broadcast
-forge script script/Interactions.s.sol:WithdrawFundMe --rpc-url sepolia  --private-key $PRIVATE_KEY  --broadcast
-```
-
-### Withdraw
-
-```
-cast send <FUNDME_CONTRACT_ADDRESS> "withdraw()"  --private-key <PRIVATE_KEY>
+forge script script/DeployOurToken.s.sol --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_API_KEY
 ```
 
 ## Estimate gas
